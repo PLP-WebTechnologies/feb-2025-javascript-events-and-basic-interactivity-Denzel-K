@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Playground</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Playground <i class="fas fa-magic"></i></h1>
+        <p>Explore interactive web features</p>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section class="card">
+            <h2>Event Handling <i class="fas fa-hand-pointer"></i></h2>
+            
+            <div class="event-box" id="click-box">
+                <h3>Click Me!</h3>
+                <p>Click count: <span id="click-counter">0</span></p>
+            </div>
+            
+            <div class="event-box" id="hover-box">
+                <h3>Hover Over Me</h3>
+                <p id="hover-message">Waiting for hover...</p>
+            </div>
+            
+            <div class="event-box" id="keypress-box">
+                <h3>Type Something</h3>
+                <input type="text" id="keypress-input" placeholder="Press any key...">
+                <p>Last key pressed: <span id="keypress-display">None</span></p>
+            </div>
+            
+            <div class="event-box" id="secret-box">
+                <h3>Secret Zone</h3>
+                <p>Double click or long press (1.5s)</p>
+                <div id="secret-reveal"></div>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section class="card">
+            <h2>Interactive Elements <i class="fas fa-gamepad"></i></h2>
+            
+            <div class="color-changer">
+                <button id="color-btn">Change My Color</button>
+                <p id="color-text">Watch me change!</p>
+            </div>
+            
+            <div class="gallery">
+                <h3>Image Gallery</h3>
+                <div class="gallery-container">
+                    <img src="nature.jpg" alt="Gallery image" class="active">
+                    <img src="cats.jpg" alt="Gallery image">
+                    <img src="city.jpg" alt="Gallery image">
+                </div>
+                <div class="gallery-controls">
+                    <button id="prev-btn"><i class="fas fa-arrow-left"></i></button>
+                    <button id="next-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                    <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                    <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
+                        <h4>First Tab Content</h4>
+                        <p>This is the content for the first tab.</p>
+                    </div>
+                    <div class="tab-pane" id="tab2">
+                        <h4>Second Tab Content</h4>
+                        <p>Different content appears here!</p>
+                    </div>
+                    <div class="tab-pane" id="tab3">
+                        <h4>Third Tab Content</h4>
+                        <p>Yet another set of content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section class="card">
+            <h2>Form Validation <i class="fas fa-check-circle"></i></h2>
+            
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username">
+                    <div class="error-message" id="username-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                    <div class="error-message" id="password-error"></div>
+                    <div class="password-rules">
+                        <p>Password must contain:</p>
+                        <ul>
+                            <li id="rule-length">At least 8 characters</li>
+                            <li id="rule-number">At least 1 number</li>
+                            <li id="rule-special">At least 1 special character</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with <i class="fas fa-heart"></i> for JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
